@@ -19,6 +19,7 @@ export const addNewsById = () => {
   const commInput = document.createElement("input");
   commInput.classList.add("comm_input");
   commInput.placeholder = "Добавьте комментарий";
+  commInput.maxLength = "105";
   
   const commButton = document.createElement("button");
   commButton.classList.add("comm_button");
