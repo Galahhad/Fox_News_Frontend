@@ -26,9 +26,13 @@ export const addNewsById = () => {
 
   postForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (commInput.value.startsWith(" ")) {
+      commInput.value = "";
+    }else {
+      postComment(initialState.news._id, commInput);
+      commInput.value = "";
+    }
 
-    postComment(initialState.news._id, commInput);
-    commInput.value = "";
   })
 
   newsById.append(newsIdTitle, newsIdText);
