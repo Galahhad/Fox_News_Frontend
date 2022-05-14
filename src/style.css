@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#root {
+  max-width: 1440px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: .4s;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  align-items: center;
+  border-bottom: 2px solid;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  transition: .4s;
+}
+.header_text {
+  font-size: 50px;
+  margin: 0;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 25px 0 30px 0;
+  transition: .4s;
+}
+.header_text:hover {
+  box-shadow: 5px 5px 25px 0 black;
+}
+.header_text:active {
+  box-shadow: none;
+}
+.header_info {
+  margin-left: 510px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 20px;
+}
+.header_info li {
+  cursor: pointer;
+  transition: .4s;
+}
+.header_info li:hover {
+  color: rgb(0, 191, 255);
+  transform: scale(1.02);
+}
+.header_info li:active {
+  text-decoration: underline;
+}
+.center {
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.news_container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 80%;
+}
+.news_wrap {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+.news_list {
+  margin-right: 70px;
+  padding-bottom: 50px;
+  width: 200px;
+  line-height: 25px;
+  transition: .4s;
+  cursor: pointer;
+}
+.news_list:hover {
+  color: rgb(0, 191, 255);
+}
+.news_list:active {
+  text-decoration: underline;
+}
+.news_id_title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 55px;
+  margin-bottom: 20px;
+  cursor: default;
+}
+.news_id_text {
+  line-height: 30px;
+  cursor: default;
+}
+.right_bar {
+  width: 20%;
+  border-left: 2px solid;
+}
+.categories_wrapper {
+  text-align: center;
+  cursor: default;
+  margin-bottom: 30px;
+}
+.categories_wrap {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.categories_wrap li {
+  width: fit-content;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: .4s;
+}
+.categories_wrap li:hover {
+  color: rgb(0, 191, 255);
+}
+.categories_wrap li:active {
+  text-decoration: underline;
+}
+.footer {
+  background-color: rgb(36, 35, 35);
+  margin-top: auto;
+}
+.footer_info {
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: white;
+  padding: 40px;
+}
+.footer_info li {
+  cursor: pointer;
+  transition: .4s;
+}
+.footer_info li:hover {
+  color: rgb(0, 191, 255);
+  transform: scale(1.02);
+}
+.footer_info li:active {
+  text-decoration: underline;
+}
+::selection {
+  background-color: black;
+  color: white;
+}
+.comm_wrap {
+  width: 100%;
+  list-style: none;
+  margin-top: 20px;
+  line-height: 30px;
+  padding: 0;
+}
+.comm_list {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid;
+  cursor: default;
+}
+.post_form {
+  margin-top: 30px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.comm_button {
+  display: block;
+  width: 14%;
+  height: 100%;
+  border: 2px solid;
+  transition: .4s;
+  cursor: pointer;
+}
+.comm_button:active {
+  transform: scale(0.98);
+}
+.comm_input {
+  width: 85%;
+  height: 30px;
+  border: 2px solid;
+  caret-color: rgb(0, 191, 255);
+}
+/* .header .center .news_wrap .right_bar .categories_wrap .categories_wrapper .comm_button .comm_list .comm_input */
+.dark #root {
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+.dark1 .header {
+  background-color: black;
+  border-color: white;
+  color: white;
+}
+.dark2 .header_text {
+  background-color: white;
+  color: black;
+}
+.dark3 .header_text:hover {
+  box-shadow: 5px 5px 25px 0 white;
+}
+.dark4 .header_text:active {
+  box-shadow: none;
+}
+.dark5 .comm_button {
+  background-color: inherit;
+  border-color: white;
+  color: white;
+}
+.dark6 .comm_input{
+  background-color: inherit;
+  border-color: white;
+  color: white;
+}
+.dark7 ::selection {
+  color: black;
+  background-color: white;
+}
+.checkbox {
+  display: none;
+}
+.switch_wrap {
+  cursor: pointer;
+  font-size: 20px;
+  transition: .4s;
+}
+.switch_wrap:hover {
+  color: rgb(0, 191, 255);
+}
