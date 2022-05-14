@@ -13,6 +13,6 @@ export const addCommsByNews = () => {
     commList.textContent = comments.text;
 
     newsWrap.append(commWrap);
-    commWrap.append(commList);
+    commWrap.prepend(commList);
   })
 }
