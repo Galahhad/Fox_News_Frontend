@@ -1,6 +1,8 @@
 import { initialState } from "../initialState";
 import { postComment } from "../queries/comments/postComment";
 import { deleteNews } from "../queries/news/deleteNews";
+import { getNews } from "../queries/news/getNews";
+import { getNewsById } from "../queries/news/getNewsById";
 
 export const addNewsById = () => {
   const newsById = document.querySelector(".news_wrap");
@@ -33,6 +35,9 @@ export const addNewsById = () => {
     }else {
       postComment(initialState.news._id, commInput);
       commInput.value = "";
+      if(!Array.isArray(initialState.news)) {
+        getNewsById(initialState.news._id);
+      }
     }
   })
 
@@ -43,10 +48,11 @@ export const addNewsById = () => {
   deleteButton.addEventListener("click", () => {
     const password = prompt("Введите пароль");
     if (password !== "0909") {
-      alert("В доступе отказано")
+      alert("В доступе отказано");
     } else {
       deleteNews(initialState.news._id);
-      alert("Новость удалена")
+      alert("Новость удалена");
+      getNews();
     }
   })
 
@@ -55,3 +61,4 @@ export const addNewsById = () => {
   newsIdText.after(postForm);
   postForm.append(commInput, commButton);
 }
+
