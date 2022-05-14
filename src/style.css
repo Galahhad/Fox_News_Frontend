@@ -1,4 +1,5 @@
 * {
+* {
   box-sizing: border-box;
 }
 body {
@@ -241,4 +242,22 @@ body {
 }
 .switch_wrap:hover {
   color: rgb(0, 191, 255);
+}
+.delete_button {
+  padding: 10px;
+  width: 130px;
+  margin-left: 968px;
+  border: none;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .5s;
+  margin-bottom: 10px;
+  color: white;
+}
+.delete_button:hover {
+  background-color: red;
+}
+.delete_button:active {
+  transform: scale(0.97);
 }
