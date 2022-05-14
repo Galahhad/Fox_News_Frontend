@@ -42,7 +42,7 @@ export const addNewsById = () => {
 
   deleteButton.addEventListener("click", () => {
     prompt("Введите пароль");
-    if (prompt.value === "0909") {
+    if (prompt.value !== "0909") {
       alert("В доступе отказано")
     } else {
       deleteNews(initialState.news._id);
