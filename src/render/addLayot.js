@@ -51,6 +51,10 @@ export const addLayot = () => {
   const grandList  = document.createElement("li");
   grandList.textContent = "Главная страница";
 
+  grandList.addEventListener("click", () => {
+    getNews();
+  })
+
   const headerMenu = document.createElement("li");
   headerMenu.textContent = "Меню";
 
