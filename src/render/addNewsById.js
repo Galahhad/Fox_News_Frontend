@@ -1,5 +1,6 @@
 import { initialState } from "../initialState";
 import { postComment } from "../queries/comments/postComment";
+import { deleteNews } from "../queries/news/deleteNews";
 
 export const addNewsById = () => {
   const newsById = document.querySelector(".news_wrap");
@@ -33,10 +34,24 @@ export const addNewsById = () => {
       postComment(initialState.news._id, commInput);
       commInput.value = "";
     }
+  })
 
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Удалить новость";
+  deleteButton.classList.add("delete_button");
+
+  deleteButton.addEventListener("click", () => {
+    prompt("Введите пароль");
+    if (prompt.value === "0909") {
+      alert("В доступе отказано")
+    } else {
+      deleteNews(initialState.news._id);
+      alert("Новость удалена")
+    }
   })
 
   newsById.append(newsIdTitle, newsIdText);
+  newsById.prepend(deleteButton);
   newsIdText.after(postForm);
   postForm.append(commInput, commButton);
 }
